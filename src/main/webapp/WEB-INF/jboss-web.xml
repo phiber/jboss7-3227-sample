@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright © 2011 DV Bern AG, Switzerland
+  ~
+  ~ Das vorliegende Dokument, einschliesslich aller seiner Teile, ist urheberrechtlich
+  ~ geschützt. Jede Verwertung ist ohne Zustimmung der DV Bern AG unzulässig. Dies gilt
+  ~ insbesondere fuer Vervielfältigungen, die Einspeicherung und Verarbeitung in
+  ~ elektronischer Form. Wird das Dokument einem Kunden im Rahmen der Projektarbeit zur
+  ~ Ansicht übergeben ist jede weitere Verteilung durch den Kunden an Dritte untersagt.
+  -->
+
+<!DOCTYPE jboss-web PUBLIC "-//JBoss//DTD Web Application 4.2//EN"
+        "http://www.jboss.org/j2ee/dtd/jboss-web_4_2.dtd">
+<jboss-web>
+    <security-domain>java:/jaas/other</security-domain>
+    <context-root>app</context-root>
+</jboss-web>
