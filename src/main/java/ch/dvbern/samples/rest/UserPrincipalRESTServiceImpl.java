@@ -1,5 +1,6 @@
 package ch.dvbern.samples.rest;
 
+import java.security.Principal;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.ws.rs.core.Context;
@@ -13,7 +14,10 @@ public class UserPrincipalRESTServiceImpl implements UserPrincipalRESTService {
 	private SecurityContext securityContext;
 
     public String helloUser() {
-		final String userName = securityContext.getUserPrincipal().getName();
-		return "Hello " + userName+"!";
+		Principal userPrincipal = securityContext.getUserPrincipal();
+		if (userPrincipal == null) {
+			throw new IllegalArgumentException("userPrincipal is null");
+		}
+		return "Hello " + userPrincipal.getName()+"!";
 	}
 }
